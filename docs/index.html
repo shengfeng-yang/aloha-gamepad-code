@@ -2,21 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Untethered bimanual teleoperation for Mobile ALOHA using gamepad + inverse kinematics. Control both arms and mobile base with a standard wireless controller, collect demonstrations, and fine-tune pi0.5.">
+  <meta name="description" content="Leader-free teleoperation for Mobile ALOHA using gamepad + inverse kinematics. Control both arms and mobile base with a standard wireless controller, collect demonstrations, and fine-tune pi0.5.">
   <meta name="keywords" content="Mobile ALOHA, teleoperation, gamepad, inverse kinematics, pi0.5, VLA, robot learning, bimanual manipulation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="Untethered Bimanual Teleoperation for Mobile ALOHA">
-  <meta property="og:description" content="Gamepad-IK control for Mobile ALOHA with pi0.5 fine-tuning for laboratory manipulation.">
+  <meta property="og:title" content="Leader-Free Mobile ALOHA">
+  <meta property="og:description" content="Gamepad-IK Teleoperation and VLA Fine-Tuning for Laboratory Manipulation.">
   <meta property="og:url" content="https://shengfeng-yang.github.io/aloha-gamepad/">
   <meta property="og:image" content="https://shengfeng-yang.github.io/aloha-gamepad/static/images/social_preview.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Untethered Bimanual Teleoperation for Mobile ALOHA">
-  <meta name="twitter:description" content="Gamepad-IK control for Mobile ALOHA with pi0.5 fine-tuning.">
+  <meta name="twitter:title" content="Leader-Free Mobile ALOHA">
+  <meta name="twitter:description" content="Gamepad-IK Teleoperation and VLA Fine-Tuning for Laboratory Manipulation.">
   <meta name="twitter:image" content="https://shengfeng-yang.github.io/aloha-gamepad/static/images/social_preview.png">
 
-  <title>Untethered Bimanual Teleoperation for Mobile ALOHA</title>
+  <title>Leader-Free Mobile ALOHA</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -115,10 +115,10 @@
         <div class="column has-text-centered">
 
           <h1 class="title is-2 publication-title">
-            Untethered Bimanual Teleoperation for Mobile ALOHA
+            Leader-Free Mobile ALOHA
           </h1>
           <h2 class="subtitle is-4" style="color: #555;">
-            Gamepad-IK Control and &pi;0.5 Fine-Tuning for Laboratory Manipulation
+            Gamepad-IK Teleoperation and VLA Fine-Tuning for Laboratory Manipulation
           </h2>
 
           <div class="is-size-5 publication-authors">
@@ -196,7 +196,7 @@
 <!-- ===== KEY IDEA ===== -->
 <section class="section" style="background: #fafbfc;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Key Idea: Untethered Operator Mobility</h2>
+    <h2 class="title is-3">Key Idea: Leader-Free Operator Mobility</h2>
 
     <div class="key-idea-box">
       <p>
@@ -209,7 +209,7 @@
     <!-- Comparison -->
     <div class="columns is-comparison" style="margin-top: 1.5rem;">
       <div class="column is-6">
-        <div class="comparison-label">&#x274C; Tethered (Leader-Follower)</div>
+        <div class="comparison-label">&#x274C; Standard (Leader-Follower)</div>
         <!-- TODO: Replace with actual photo -->
         <div class="video-placeholder" style="padding: 40px 20px; font-size: 0.95rem;">
           <i class="fas fa-user-lock" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;"></i>
@@ -219,7 +219,7 @@
         </div>
       </div>
       <div class="column is-6">
-        <div class="comparison-label">&#x2705; Untethered (Ours)</div>
+        <div class="comparison-label">&#x2705; Leader-Free (Ours)</div>
         <!-- TODO: Replace with actual photo -->
         <div class="video-placeholder" style="padding: 40px 20px; font-size: 0.95rem; border-color: #3273dc; background: #eef3fc;">
           <i class="fas fa-walking" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem; color: #3273dc;"></i>
@@ -276,7 +276,7 @@
     <h2 class="title is-3">Results</h2>
     <div class="content">
       <p>
-        We evaluate on a tube pick-and-place task using the Mobile ALOHA platform. The tube and rack are placed at varying positions near either the left or right arm, requiring the policy to select the correct arm and execute the grasp. The model is fine-tuned on 55 minutes of gamepad-collected demonstrations.
+        We evaluate on a tube pick-and-place task using the Mobile ALOHA platform. The tube and rack are placed at varying positions near either the left or right arm, requiring the policy to select the correct arm and execute the grasp. The VLA model is fine-tuned on 55 minutes of gamepad-collected demonstrations.
       </p>
 
       <table class="comparison-table">
@@ -315,8 +315,8 @@
     <h2 class="title is-3">BibTeX</h2>
     <!-- TODO: Update with actual arXiv ID when available -->
     <pre class="bibtex"><code>@article{yang2026aloha-gamepad,
-  title={Untethered Bimanual Teleoperation for Mobile ALOHA:
-         Gamepad-IK Control and pi0.5 Fine-Tuning
+  title={Leader-Free Mobile ALOHA:
+         Gamepad-IK Teleoperation and VLA Fine-Tuning
          for Laboratory Manipulation},
   author={Yang, Shengfeng},
   journal={arXiv preprint arXiv:XXXX.XXXXX},

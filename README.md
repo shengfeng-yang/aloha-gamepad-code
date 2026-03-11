@@ -1,8 +1,8 @@
-# ALOHA Gamepad
+# Leader-Free Mobile ALOHA
 
 #### Project Website: https://shengfeng-yang.github.io/aloha-gamepad/
 
-Untethered teleoperation for [Mobile ALOHA](https://mobile-aloha.github.io/) using a gamepad + inverse kinematics. Control both bimanual arms and mobile base with a standard wireless controller (PS4). Includes data collection, [pi0.5](https://www.physicalintelligence.company/blog/pi05) fine-tuning, and inference pipelines.
+Leader-free teleoperation for [Mobile ALOHA](https://mobile-aloha.github.io/) using a gamepad + inverse kinematics. Control both bimanual arms and mobile base with a standard wireless controller (PS4). Includes data collection, [pi0.5](https://www.physicalintelligence.company/blog/pi05) fine-tuning, and inference pipelines.
 
 ## Overview
 
