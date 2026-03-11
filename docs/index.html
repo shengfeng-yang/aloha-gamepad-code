@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Untethered bimanual teleoperation for Mobile ALOHA using gamepad + inverse kinematics. Control both arms and mobile base with a standard wireless controller, collect demonstrations, and fine-tune pi0.5.">
+  <meta name="keywords" content="Mobile ALOHA, teleoperation, gamepad, inverse kinematics, pi0.5, VLA, robot learning, bimanual manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Untethered Bimanual Teleoperation for Mobile ALOHA">
+  <meta property="og:description" content="Gamepad-IK control for Mobile ALOHA with pi0.5 fine-tuning for laboratory manipulation.">
+  <meta property="og:url" content="https://shengfeng-yang.github.io/aloha-gamepad/">
+  <meta property="og:image" content="https://shengfeng-yang.github.io/aloha-gamepad/static/images/social_preview.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Untethered Bimanual Teleoperation for Mobile ALOHA">
+  <meta name="twitter:description" content="Gamepad-IK control for Mobile ALOHA with pi0.5 fine-tuning.">
+  <meta name="twitter:image" content="https://shengfeng-yang.github.io/aloha-gamepad/static/images/social_preview.png">
+
+  <title>Untethered Bimanual Teleoperation for Mobile ALOHA</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .publication-title {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 700;
+    }
+    .publication-authors {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .hero-body {
+      padding-bottom: 2rem;
+    }
+    .section {
+      padding: 3rem 1.5rem;
+    }
+    .container.is-max-desktop {
+      max-width: 960px;
+    }
+    .link-block a {
+      margin: 0 4px 8px 4px;
+    }
+    .teaser-figure {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .video-placeholder {
+      background: #f0f2f5;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      padding: 80px 40px;
+      text-align: center;
+      color: #888;
+      font-size: 1.1rem;
+    }
+    .comparison-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #ddd;
+      padding: 10px 14px;
+      text-align: center;
+    }
+    .comparison-table th {
+      background: #f5f7fa;
+      font-weight: 600;
+    }
+    .comparison-table tr:nth-child(even) {
+      background: #fafbfc;
+    }
+    .key-idea-box {
+      background: #f8f9fb;
+      border-left: 4px solid #3273dc;
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1.5rem 0;
+    }
+    pre.bibtex {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      overflow-x: auto;
+    }
+    .footer {
+      padding: 2rem 1.5rem;
+    }
+    .columns.is-comparison > .column {
+      padding: 0.5rem;
+    }
+    .comparison-label {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-2 publication-title">
+            Untethered Bimanual Teleoperation for Mobile ALOHA
+          </h1>
+          <h2 class="subtitle is-4" style="color: #555;">
+            Gamepad-IK Control and &pi;0.5 Fine-Tuning for Laboratory Manipulation
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="#">Dr. Shengfeng Yang</a>
+            </span>
+          </div>
+
+          <!-- Links -->
+          <div class="column has-text-centered" style="margin-top: 1rem;">
+            <div class="publication-links link-block">
+
+              <!-- Paper link -->
+              <a class="button is-rounded is-dark" href="https://shengfeng-yang.github.io/aloha-gamepad/" target="_blank">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+
+              <!-- arXiv link -->
+              <a class="button is-rounded is-dark" href="https://shengfeng-yang.github.io/aloha-gamepad/" target="_blank">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+
+              <!-- Code link -->
+              <a class="button is-rounded is-dark" href="https://github.com/shengfeng-yang/aloha-gamepad-code" target="_blank">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code</span>
+              </a>
+
+              <!-- Dataset link -->
+              <a class="button is-rounded is-dark" href="https://huggingface.co/datasets/shengfeng-yang/aloha-gamepad-tube-pickup" target="_blank">
+                <span class="icon"><i class="far fa-images"></i></span>
+                <span>Dataset</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEASER VIDEO ===== -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-10">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+            <iframe src="https://www.youtube.com/embed/95BbBLL41WI"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABSTRACT ===== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+      <p>
+        We present an open-source teleoperation system that uses a standard gamepad with inverse kinematics to control the full Mobile ALOHA platform&mdash;both bimanual arms and the mobile base. Unlike the standard leader-follower interface, which physically tethers the operator to the robot, our gamepad-IK approach decouples the operator, enabling them to walk close to the robot for visual precision and move freely around the workspace to find optimal viewing angles. We demonstrate this system on three laboratory manipulation tasks including precision pipette tip attachment, tube pick-and-place, and bimanual pipette tip release, showcasing the system's capability for both single-arm and coordinated bimanual control. Using 55 minutes of gamepad-collected demonstrations, we fine-tune &pi;0.5 and show that the resulting policy can correctly select the appropriate arm based on object position and successfully execute tube pickup, with robust visual tracking of object positions during execution. We release the complete teleoperation code, demonstration videos, and training dataset at the Project page: <a href="https://shengfeng-yang.github.io/aloha-gamepad/">https://shengfeng-yang.github.io/aloha-gamepad/</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KEY IDEA ===== -->
+<section class="section" style="background: #fafbfc;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Key Idea: Untethered Operator Mobility</h2>
+
+    <div class="key-idea-box">
+      <p>
+        <strong>Leader-follower teleoperation tethers the operator to the robot.</strong>
+        For precision tasks like laboratory manipulation, this limits the operator's ability to see fine contact details.
+        By replacing leader arms with a wireless gamepad + IK, the operator can walk freely&mdash;getting close for precision, orbiting for better angles, and stepping back for a global view.
+      </p>
+    </div>
+
+    <!-- Comparison -->
+    <div class="columns is-comparison" style="margin-top: 1.5rem;">
+      <div class="column is-6">
+        <div class="comparison-label">&#x274C; Tethered (Leader-Follower)</div>
+        <!-- TODO: Replace with actual photo -->
+        <div class="video-placeholder" style="padding: 40px 20px; font-size: 0.95rem;">
+          <i class="fas fa-user-lock" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem;"></i>
+          Operator fixed behind robot<br>
+          ~50 cm from end-effector<br>
+          No viewpoint adjustment
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="comparison-label">&#x2705; Untethered (Ours)</div>
+        <!-- TODO: Replace with actual photo -->
+        <div class="video-placeholder" style="padding: 40px 20px; font-size: 0.95rem; border-color: #3273dc; background: #eef3fc;">
+          <i class="fas fa-walking" style="font-size: 1.5rem; display: block; margin-bottom: 0.5rem; color: #3273dc;"></i>
+          Operator free to move anywhere<br>
+          5&ndash;15 cm from contact point<br>
+          Walk-around viewpoint optimization
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== METHOD ===== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Method</h2>
+    <div class="content">
+      <p>
+        Our system maps gamepad inputs to Cartesian end-effector velocities, solved via inverse kinematics at 50 Hz for each arm of the Mobile ALOHA platform. Demonstrations are recorded in LeRobot v3.0 format and used to fine-tune &pi;0.5 for autonomous execution.
+      </p>
+
+      <figure class="image" style="margin: 2rem 0;">
+        <img src="static/images/pipeline_diagram.png" alt="System pipeline: gamepad teleoperation, data collection, pi0.5 fine-tuning, autonomous policy" class="teaser-figure">
+        <figcaption class="has-text-centered" style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">
+          System pipeline. Phase 1: the operator uses a PS4 gamepad to control the Mobile ALOHA via inverse kinematics and records demonstrations. Phase 2: the dataset is used to fine-tune &pi;0.5 for autonomous execution.
+        </figcaption>
+      </figure>
+
+      <h3 class="title is-4">Gamepad Control Mapping</h3>
+      <p>
+        The controller uses a modifier-based design that balances workload across both hands. Position control (left stick) and height/roll (right stick) are distributed by default, while L2 and R2 modifiers allow either hand to temporarily take on base or orientation control.
+      </p>
+
+      <!-- Controller mapping figure -->
+      <figure class="image" style="margin: 1.5rem 0;">
+        <!-- TODO: Add your gamepad mapping figure here -->
+        <img src="static/images/gamepad_mapping.png" alt="Gamepad control mapping for Mobile ALOHA teleoperation" class="teaser-figure">
+        <figcaption class="has-text-centered" style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">
+          Gamepad control mapping. Blue = arm manipulation, red = base control, green = gripper, brown = arm selection, purple = recording, gray = system.
+        </figcaption>
+      </figure>
+
+      <h3 class="title is-4">Safety Features</h3>
+      <p>
+        The system includes workspace limits (distance-dependent Cartesian bounds), IK fallback with automatic recovery after consecutive failures, per-joint limit validation with safety buffers, and acceleration-limited base control behind an L2 deadman switch.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="section" style="background: #fafbfc;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+    <div class="content">
+      <p>
+        We evaluate on a tube pick-and-place task using the Mobile ALOHA platform. The tube and rack are placed at varying positions near either the left or right arm, requiring the policy to select the correct arm and execute the grasp. The model is fine-tuned on 55 minutes of gamepad-collected demonstrations.
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th>Observation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arm selection</td>
+            <td>Reliably selects the closest arm based on visual observation</td>
+          </tr>
+          <tr>
+            <td>Tube pickup</td>
+            <td>Successfully grasps tubes from rack in majority of trials</td>
+          </tr>
+          <tr>
+            <td>Visual tracking</td>
+            <td>Dynamically adjusts trajectory when tube is moved during execution</td>
+          </tr>
+          <tr>
+            <td>Distractor robustness</td>
+            <td>Correctly identifies target tube despite novel background objects not seen during training</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BIBTEX ===== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">BibTeX</h2>
+    <!-- TODO: Update with actual arXiv ID when available -->
+    <pre class="bibtex"><code>@article{yang2026aloha-gamepad,
+  title={Untethered Bimanual Teleoperation for Mobile ALOHA:
+         Gamepad-IK Control and pi0.5 Fine-Tuning
+         for Laboratory Manipulation},
+  author={Yang, Shengfeng},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026},
+  url={https://shengfeng-yang.github.io/aloha-gamepad/}
+}</code></pre>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered" style="font-size: 0.9rem; color: #888;">
+          <p>
+            This page was built using the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
+            adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
